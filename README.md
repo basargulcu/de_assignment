@@ -34,12 +34,12 @@ Segments are all parts from the leg, including all intermediate stops until the 
 The order with the TripId 'a1' has 2 Legs. The origin of the first Leg is MEX and the destination is MNL. The second Leg is the return.
 In this example, each Leg consists of 2 segments where CAN is the intermediate stop.
 
-| TripId                                  | Itinerary               | OneWayOrReturn | DepartureAirport | ArrivalAirport | Leg | SegmentOrder | TransactionDateUTC          |
-| -------------------------------------------- | ----------------------- | -------------- | ---------------- | -------------- | --- | -------- | --------------------------- |
-| a1 | MEX-CAN-MEX-CAN-MNL-CAN | Return         | MEX              | CAN            | 1   | 1        | 2019-03-14 03:58:37.343 UTC |
-| a1 | MEX-CAN-MEX-CAN-MNL-CAN | Return         | CAN              | MNL            | 1   | 2        | 2019-03-14 03:58:37.343 UTC |
-| a1 | MEX-CAN-MEX-CAN-MNL-CAN | Return         | MNL              | CAN            | 2   | 1        | 2019-03-14 03:58:37.343 UTC |
-| a1 | MEX-CAN-MEX-CAN-MNL-CAN | Return         | CAN              | MEX            | 2   | 2        | 2019-03-14 03:58:37.343 UTC |
+| TripId | Itinerary               | OneWayOrReturn | DepartureAirport | ArrivalAirport | Leg | SegmentOrder | TransactionDateUTC          |
+| ------ | ----------------------- | -------------- | ---------------- | -------------- | --- | ------------ | --------------------------- |
+| a1     | MEX-CAN-MEX-CAN-MNL-CAN | Return         | MEX              | CAN            | 1   | 1            | 2019-03-14 03:58:37.343 UTC |
+| a1     | MEX-CAN-MEX-CAN-MNL-CAN | Return         | CAN              | MNL            | 1   | 2            | 2019-03-14 03:58:37.343 UTC |
+| a1     | MEX-CAN-MEX-CAN-MNL-CAN | Return         | MNL              | CAN            | 2   | 1            | 2019-03-14 03:58:37.343 UTC |
+| a1     | MEX-CAN-MEX-CAN-MNL-CAN | Return         | CAN              | MEX            | 2   | 2            | 2019-03-14 03:58:37.343 UTC |
 
 The correct order of those flights can be calculated by ordering with respect to Leg and SegmentOrder fields.
 As you can see from the sample data above, the itinerary column within the data is produced erroneously. The correct Itinerary for this order should be MEX-CAN-MNL-CAN-MEX.
